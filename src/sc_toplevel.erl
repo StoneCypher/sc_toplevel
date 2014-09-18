@@ -8,10 +8,21 @@
       stlds/0,
       gtlds/0,
       itlds/0,
+      rtlds/0,
+      ttlds/0,
 
     rawdata/0
+%     type_histo/0 should histo the middle element
 
 ]).
+
+
+
+
+
+% type_histo() ->
+%
+%    sc:histograph([ I || [_,I,_] <- sc_toplevel:rawdata() ]).
 
 
 
@@ -52,6 +63,22 @@ itlds() ->
 gtlds() ->
 
     [ T || [T,"generic",_] <- rawdata() ].
+
+
+
+
+
+rtlds() ->
+
+    [ T || [T,"generic-restricted",_] <- rawdata() ].
+
+
+
+
+
+ttlds() ->
+
+    [ T || [T,"test",_] <- rawdata() ].
 
 
 
