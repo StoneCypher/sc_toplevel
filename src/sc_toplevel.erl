@@ -5,6 +5,9 @@
 
     tlds/0,
       cctlds/0,
+      stlds/0,
+      gtlds/0,
+      itlds/0,
 
     rawdata/0
 
@@ -30,9 +33,25 @@ cctlds() ->
 
 
 
+stlds() ->
+
+    [ T || [T,"sponsored",_] <- rawdata() ].
+
+
+
+
+
+itlds() ->
+
+    [ T || [T,"infrastructure",_] <- rawdata() ].
+
+
+
+
+
 gtlds() ->
 
-    [ T || [T,_,_] <- rawdata() ].
+    [ T || [T,"generic",_] <- rawdata() ].
 
 
 
