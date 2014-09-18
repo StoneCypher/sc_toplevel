@@ -1,13 +1,36 @@
 
 -module(sc_toplevel).
 
--export([ tlds/0, rawdata/0 ]).
+-export([
+
+    tlds/0,
+      cctlds/0,
+
+    rawdata/0
+
+]).
 
 
 
 
 
 tlds() ->
+
+    [ T || [T,_,_] <- rawdata() ].
+
+
+
+
+
+cctlds() ->
+
+    [ T || [T,"country-code",_] <- rawdata() ].
+
+
+
+
+
+gtlds() ->
 
     [ T || [T,_,_] <- rawdata() ].
 
