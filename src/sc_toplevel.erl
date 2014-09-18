@@ -1,4 +1,8 @@
 
+% last updated 9/17/2014
+% http://www.iana.org/domains/root/db
+% cut and paste the page table content; replace " \t" with ","; insert
+
 -module(sc_toplevel).
 
 -export([
