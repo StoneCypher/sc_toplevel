@@ -1,7 +1,19 @@
 
 -module(sc_toplevel).
 
--export([rawdata/0]).
+-export([ tlds/0, rawdata/0 ]).
+
+
+
+
+
+tlds() ->
+
+    [ T || [T,_,_] <- rawdata() ].
+
+
+
+
 
 rawdata() ->
 
